@@ -1,0 +1,15 @@
+transformers>=4.30.0
+datasets
+torch>=1.12
+accelerate
+tqdm
+Pillow
+# Donut uses a processor available via HF; ensure vision deps are available
+ftfy
+regex
+safetensors
+opencv-python
+seqeval
+sentencepiece
+protobuf
+
