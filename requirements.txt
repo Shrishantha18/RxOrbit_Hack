@@ -1,6 +1,7 @@
 streamlit
 pillow
 gTTs
+reportlab
 pdf2image
 pandas
 rapidfuzz
