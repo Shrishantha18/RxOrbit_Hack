@@ -1,0 +1,12 @@
+streamlit
+pillow
+pdf2image
+pandas
+rapidfuzz
+transformers
+torch
+accelerate
+# OCR engines:
+easyocr
+paddlepaddle
+paddleocr
