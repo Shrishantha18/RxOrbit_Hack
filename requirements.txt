@@ -1,6 +1,7 @@
 streamlit
 pillow
 gTTs
+datasets
 reportlab
 pdf2image
 pandas
