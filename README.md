@@ -1,114 +1,131 @@
-# Medical Document Analyzer with Fine-tuned Donut Model
+# 🧠 RxOrbit – AI-Powered Medical Document Analyzer
 
-An advanced application that leverages a fine-tuned Donut model for accurate extraction and analysis of medical documents, with support for multiple languages including English and Kannada.
+RxOrbit is an AI-based system that analyzes **medical prescriptions and lab reports** from images using **OCR + Google Gemini AI** and produces:
+- ✅ Structured medical analysis  
+- 📑 Downloadable PDF reports  
+- 🔊 Audio explanation (text-to-speech)  
+- 🤖 Telegram Bot integration  
+- 🧪 GRPO-style optimized inference for enhanced output quality  
 
-## Features
+This project is built as a **mini-project demonstrating real-world AI + NLP + Automation integration**.
 
-- **Document Analysis**: Automatically extracts and analyzes medical reports and prescriptions
-- **Fine-tuned Donut Model**: Specialized OCR model trained specifically for medical documents
-- **Multilingual Support**: Provides analysis in both English and Kannada
-- **Voice Output**: Converts analysis to speech for better accessibility
-- **Export Options**: Save analysis as text or PDF
+---
 
-## Prerequisites
+## 🚀 Key Features
 
-- Python 3.8+
-- pip
-- Tesseract OCR (for fallback text extraction)
-- Poppler (for PDF processing)
-- CUDA-compatible GPU (recommended for better performance)
+- 📷 **Image-based OCR using Gemini Vision**
+- 🧠 **AI-powered medical understanding**
+- 🩺 Automatic detection of:
+  - Prescription
+  - Medical Report
+- 📄 **PDF report generation**
+- 🔊 **Voice explanation using gTTS**
+- 🤖 **Telegram Bot Interface**
+- 🧪 **GRPO-style optimization** (multi-sampling + reward-based best output selection)
+- 🌐 Multi-language support:
+  - English 🇬🇧
+  - Kannada 🇮🇳
 
-## Installation
+---
 
-1. Clone the repository:
-   ```bash
-   git clone [your-repository-url]
-   cd Devofolio_Hackathon
-   ```
+## 🛠️ Tech Stack
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\activate  # Windows
-   # or
-   source .venv/bin/activate  # Linux/Mac
-   ```
+- **Python 3.10+**
+- **Google Gemini API**
+- **Telegram Bot API**
+- **Pytesseract (OCR fallback)**
+- **Pillow (Image Processing)**
+- **Streamlit (Web Demo)**
+- **gTTS (Audio Output)**
+- **ReportLab (PDF Generation)**
+- **Git & GitHub (Version Control)**
 
-3. Install PyTorch with CUDA support (recommended):
-   ```bash
-   pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-   ```
+---
 
-4. Install other dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-5. Set up environment variables (if needed):
-   - Create a `.env` file in the project root
-   - Add any required API keys or configurations
-
-## Usage
-
-1. Run the Streamlit app:
-   ```bash
-   streamlit run streamlit_app.py
-   ```
-
-2. Open the app in your browser (usually http://localhost:8501)
-
-3. Upload a medical document (PNG, JPG, or PDF)
-
-4. Select your preferred output language (English or Kannada)
-
-5. View the analysis and use the available options:
-   - Listen to the audio version
-   - Download as text file
-   - Download as PDF
-
-## Model Details
-
-The application uses a fine-tuned Donut model that has been specifically trained on medical documents to achieve high accuracy in:
-- Text extraction from various medical document formats
-- Structured data extraction from prescriptions and lab reports
-- Handling of medical terminology and abbreviations
-
-## Project Structure
+## 📂 Project Structure
 
 ```
-Devofolio_Hackathon/
-├── .env                    # Environment variables
-├── finetune_donut.py          # Core application logic
-├── streamlit_app.py       # Streamlit UI and application flow
-├── requirements.txt       # Python dependencies
-├── README.md             # This file
-├── test_donut.py         # Script to test the Donut model
-└── data/                 # (Optional) Sample data directory
+RxOrbit_Hack/
+│
+├── app.py
+├── telegram_bot.py
+├── streamlit_app.py
+├── .env
+├── requirements.txt
+└── README.md
 ```
 
-## Dependencies
 
-- streamlit
-- torch
-- transformers
-- python-dotenv
-- gTTS
-- reportlab
-- Pillow
-- pytesseract
-- pdf2image
-- numpy
 
-## License
+---
 
-[Your License Here]
+## ⚙️ Setup Instructions
+```
+1️⃣ Clone the Repository
+git clone <your-repo-url>
+cd RxOrbit_Hack
 
-## Contributing
+2️⃣ Create Virtual Environment
+python -m venv venv
+venv\Scripts\activate   # Windows
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+3️⃣ Install Dependencies
+pip install -r requirements.txt
 
-## Acknowledgements
+4️⃣ Create .env File
 
-- [Hugging Face](https://huggingface.co/) for the Donut model architecture
-- [NAVER CLOVA](https://github.com/clovaai/donut) for the original Donut implementation
-- [Streamlit](https://streamlit.io/) for the web interface
+GEMINI_API_KEY=your_gemini_api_key_here
+TELEGRAM_TOKEN=your_telegram_bot_token_here
+
+▶️ Running the Applications
+
+Run Telegram Bot
+python telegram_bot.py
+```
+## 🧪 GRPO Optimization (Mini Research Feature)
+
+The project simulates **GRPO (Group Relative Policy Optimization)** by:
+
+- Generating multiple candidate outputs  
+- Scoring each candidate using Gemini as a reward model  
+- Selecting the best-scoring response  
+
+This improves:
+
+- ✅ Output accuracy  
+- ✅ Reduction of hallucinations  
+- ✅ Better medical relevance  
+
+---
+
+## 🎯 Use Case Examples
+
+### ✅ Prescription Upload
+Upload a prescription image → get:
+- Medicine name  
+- Dosage  
+- Frequency  
+- Food timing  
+
+### ✅ Lab Report Upload
+Upload a lab report image → get:
+- Test values  
+- Normal range  
+- Status (HIGH / LOW / NORMAL)  
+
+---
+
+## 🔐 Security Note
+
+- API keys are stored using **environment variables**
+- Do **NOT** upload `.env` to GitHub  
+
+---
+
+## 📌 Academic Relevance
+
+This project demonstrates:
+- Telegram Automation  
+- AI-based Medical Document Processing  
+- OCR and NLP Pipelines  
+- AI Optimization Techniques (GRPO)  
