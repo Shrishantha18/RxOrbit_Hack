@@ -13,6 +13,7 @@ accelerate
 easyocr
 paddlepaddle
 paddleocr
+pytesseract
 streamlit>=1.22.0
 requests
 google-generativeai>=0.8.0
