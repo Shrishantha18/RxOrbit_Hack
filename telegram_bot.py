@@ -224,8 +224,8 @@ def handle_docs_photo(message):
         
         # Create Inline Keyboard
         markup = types.InlineKeyboardMarkup()
-        btn_en = types.InlineKeyboardButton("🇬🇧 English", callback_data="English")
-        btn_kn = types.InlineKeyboardButton("🇮🇳 Kannada", callback_data="Kannada")
+        btn_en = types.InlineKeyboardButton("English", callback_data="English")
+        btn_kn = types.InlineKeyboardButton("Kannada", callback_data="Kannada")
         markup.add(btn_en, btn_kn)
         
         bot.reply_to(message, "Please select the language for analysis / ವಿಶ್ಲೇಷಣೆಗಾಗಿ ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ:", reply_markup=markup)
@@ -303,3 +303,4 @@ def handle_docs_pdf(message):
 
 if __name__ == "__main__":
     bot.infinity_polling()
+
