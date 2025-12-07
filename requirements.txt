@@ -10,9 +10,6 @@ transformers
 torch
 accelerate
 # OCR engines:
-easyocr
-paddlepaddle
-paddleocr
 pytesseract
 streamlit>=1.22.0
 requests
