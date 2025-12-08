@@ -112,3 +112,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 - [Hugging Face](https://huggingface.co/) for the Donut model architecture
 - [NAVER CLOVA](https://github.com/clovaai/donut) for the original Donut implementation
 - [Streamlit](https://streamlit.io/) for the web interface
+
